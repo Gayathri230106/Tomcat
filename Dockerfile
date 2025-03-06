@@ -17,13 +17,11 @@
 # CMD ["catalina.sh", "run"]
 # Use official Tomcat base image
 FROM tomcat:9.0
- 
- 
-# Copy the WAR file into Tomcat's webapps directory
-COPY ./target/my-tomcat-app.war /usr/local/tomcat/webapps/my-tomcat-app.war
- 
-# Expose port 8080 (default Tomcat port)
+
+# Copy the WAR file
+COPY my-app.war /usr/local/tomcat/webapps/my-app.war
+
 EXPOSE 8082
- 
-# Start Tomcat
+
 CMD ["catalina.sh", "run"]
+
