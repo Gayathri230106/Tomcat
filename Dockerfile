@@ -8,7 +8,7 @@ FROM tomcat:9.0-jdk17
 ENV CATALINA_OPTS="-Dserver.port=8082"
 
 # Copy WAR file into Tomcat's webapps directory
-COPY target/my-tomcat-app.war /usr/local/tomcat/webapps/my-app.war
+COPY workspace/Task4/target/my-tomcat-app.war /usr/local/tomcat/webapps/my-app.war
 
 # Expose port 8082
 EXPOSE 8082
